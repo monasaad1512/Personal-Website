@@ -1,0 +1,92 @@
+/* header width = container width -> to fix this*/
+.header {
+  padding: 3rem 0;
+  /* عرض   الهيدر بيبدأ مع الكونتنر فأنا عيزاه ياخده كله*/
+  display: flex;
+  justify-content: center;
+  /* علشان الهيدر يثبت وانا بسكرول */
+  position: sticky;
+  top: 0;
+  background-color: var(--color-background);
+
+  z-index: 1;
+}
+.header::before {
+  content: "";
+  /* عيزه يخرج بره حدود الكونتينر*/
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100vw;
+  border-bottom: 0.1rem solid var(--color-input-border);
+  background-color: var(--color-background);
+  top: 0.1rem;
+}
+.navigation {
+  /* for responsive screens */
+  transition: var(--transition-timing);
+  background-color: var(--color-background);
+}
+.navigation__list {
+  display: flex;
+  gap: 2rem;
+}
+/* when we create links , we create 4 status*/
+.navigation__link:link,
+.navigation__link:visited {
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+}
+.navigation__link:hover,
+.navigation__link:active {
+  text-decoration: underline;
+  color: var(--color-text);
+}
+.burger-menu__checkbox {
+  display: none;
+}
+
+/* Toggle */
+.toggle {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+}
+.toggle__title {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-18);
+}
+.toggle__label {
+  display: block;
+  position: relative;
+  background-color: var(--color-black);
+
+  padding: 0.3rem 0.4rem;
+
+  border-radius: 1.5rem;
+  width: 4.5rem;
+  height: 2.2rem;
+  cursor: pointer;
+  padding: 0.3rem 0.4rem;
+  transition: 0.3s;
+}
+.toggle__label::after {
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  display: block;
+  background-color: var(--color-white);
+  transition: 0.3s;
+}
+.toggle__checkbox {
+  display: none;
+}
+
+.toggle__checkbox:checked + .toggle__label {
+  background-color: var(--color-white);
+}
+.toggle__checkbox:checked + .toggle__label::after {
+  transform: translateX(2.1rem);
+  background-color: var(--color-green);
+}
