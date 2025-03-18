@@ -21,11 +21,11 @@ This is a **personal portfolio website** built to showcase my skills, projects, 
 ## 📂 How to Use
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-github-username/your-repo-name.git
+   git clone https://github.com/monasaad1512/Personal-Website.git
    ```
 2. Navigate to the project folder:
    ```sh
-   cd your-repo-name
+   cd Personal-Website
    ```
 3. Open `index.html` in your browser.
 
@@ -43,3 +43,5 @@ Feel free to connect with me on:
 ---
 🚀 **Live Demo**: https://monasaad1512.github.io/Personal-Website/
 
+---
+Created by Mona Saad
